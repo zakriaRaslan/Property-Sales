@@ -1,0 +1,49 @@
+[
+  {
+    "Id": 1,
+    "SaleRent": 1,
+    "Name": "Raslan 1",
+    "Type": "House",
+    "Price": 1200000,
+    "Image":"prop1.jpg"
+  },
+  {
+    "Id": 2,
+    "SaleRent": 1,
+    "Name": "Raslan 2",
+    "Type": "Apartment",
+    "Price": 900000,
+    "Image":"prop2.jpg"
+  },
+  {
+    "Id": 3,
+    "SaleRent": 2,
+    "Name": "Raslan 3",
+    "Type": "Villa",
+    "Price": 1900000,
+    "Image":"prop4.jpg"
+  },
+  {
+    "Id": 4,
+    "SaleRent": 2,
+    "Name": "Raslan 4",
+    "Type": "House",
+    "Price": 1010000,
+    "Image":"prop3.jpg"
+  },
+  {
+    "Id": 5,
+    "SaleRent": 1,
+    "Name": "Raslan 5",
+    "Type": "Duplex",
+    "Price": 1420500,
+    "Image":"prop5.jpg"
+  },
+  {
+    "Id": 6,
+    "SaleRent": 1,
+    "Name": "Raslan 6",
+    "Type": "Apartment",
+    "Price": 1050400
+  }
+]

@@ -1,0 +1,133 @@
+<div class="row">
+  <div class="col-6 m-auto">
+    <div class="card col-12">
+      <div class="card-header bg-primary fs-3 text-center">Register</div>
+      <div class="card-body">
+        <form [formGroup]="userRegisterForm" (ngSubmit)="onSubmit()">
+          <div class="form-group col-12">
+            <label for="name" class="form-label">User Name</label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              formControlName="userName"
+              [ngClass]="userName.touched && !userName.valid ? 'invalid' : ''"
+            />
+            <span
+              class="error-block"
+              *ngIf="!userName.valid && (userName.touched || formSubmitted)"
+            >
+              <span *ngIf="userName.hasError('required')"
+                >The Name Is Required</span
+              >
+              <span *ngIf="userName.hasError('maxlength')"
+                >The Name MaxLength Is 10 Char</span
+              >
+              <span *ngIf="userName.hasError('minlength')"
+                >The Name MinLength Is 3 Char</span
+              >
+            </span>
+          </div>
+          <div class="form-group col-12">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              formControlName="email"
+              [ngClass]="email.touched && !email.valid ? 'invalid' : ''"
+            />
+            <span class="error-block" *ngIf="!email.valid && (email.touched || formSubmitted)">
+              <span *ngIf="email.hasError('required')"
+                >The Email Is Required</span
+              >
+              <span *ngIf="email.hasError('email')"
+                >The Email Is Not Valid</span
+              >
+            </span>
+          </div>
+          <div class="form-group col-12">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              formControlName="password"
+              [ngClass]="password.touched && !password.valid ? 'invalid' : ''"
+            />
+            <span
+              class="error-block"
+              *ngIf="!userName.valid && (password.touched || formSubmitted)"
+            >
+              <span *ngIf="password.hasError('required')"
+                >The Password Is Required</span
+              >
+              <span *ngIf="password.hasError('maxlength')"
+                >The Password MaxLength Is 20 Char</span
+              >
+              <span *ngIf="password.hasError('minlength')"
+                >The Password MinLength Is 8 Char</span
+              >
+            </span>
+          </div>
+          <div class="form-group col-12">
+            <label for="confirmPassword" class="form-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              name="confirmPassword"
+              class="form-control"
+              formControlName="confirmPassword"
+              [ngClass]="
+                confirmPassword.touched && !confirmPassword.valid
+                  ? 'invalid'
+                  : ''
+              "
+            />
+            <span
+              class="error-block"
+              *ngIf="!userName.valid && (confirmPassword.touched || formSubmitted)"
+            >
+              <span *ngIf="confirmPassword.hasError('required')"
+                >The Confirm Password Is Required</span
+              >
+            </span>
+            <span
+              class="error-block"
+              *ngIf="userRegisterForm.hasError('matching')"
+              >The Confirm Password Is Not Match</span
+            >
+          </div>
+          <div class="form-group col-12">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input
+              type="text"
+              name="phoneNumber"
+              class="form-control"
+              formControlName="phoneNumber"
+              [ngClass]="
+                phoneNumber.touched && !phoneNumber.valid ? 'invalid' : ''
+              "
+            />
+            <span class="error-block" *ngIf="!phoneNumber.valid && (phoneNumber.touched || formSubmitted)">
+              <span *ngIf="phoneNumber.hasError('required')">
+                The Phone Number Is Required
+              </span>
+              <span *ngIf="phoneNumber.hasError('maxlength')">
+                The Phone Number Min Length Is (8)
+              </span>
+              <span *ngIf="phoneNumber.hasError('pattern')">
+                The Phone Number Is Not Valid
+              </span>
+            </span>
+          </div>
+          <div class="form-group col-12 mt-2 d-flex justify-content-around">
+            <button  class="btn btn-success me-2">Register</button>
+            <button (click)="resetForm()" class="btn btn-danger">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
