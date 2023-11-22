@@ -6,6 +6,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +43,7 @@ import { PropertyCardComponent } from './Property/Components/property-card/prope
     TabsModule.forRoot(),
     ButtonsModule.forRoot(),
     BsDatepickerModule.forRoot(),
+    CarouselModule.forRoot(),
   ],
   providers: [
     HousingService

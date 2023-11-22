@@ -5,19 +5,24 @@ import { AddPropertyComponent } from './Property/Components/add-property/add-pro
 import { PropertyDetailsComponent } from './Property/Components/property-details/property-details.component';
 import { UserLoginComponent } from './User/Components/user-login/user-login.component';
 import { UserRegisterComponent } from './User/Components/user-register/user-register.component';
+import { PropertyDetailsResolver } from './Property/Components/property-details/property-details.resolver';
 
 const routes: Routes = [
-  {path:'' , component:PropertyListComponent},
-  {path:'add-property',component:AddPropertyComponent},
-  {path:'property-detail/:id',component:PropertyDetailsComponent},
-  {path:'rent-property',component:PropertyListComponent},
-  {path:'user/login',component:UserLoginComponent},
-  {path:'user/register', component:UserRegisterComponent},
-  {path:'**',component:PropertyListComponent}
+  { path: '', component: PropertyListComponent },
+  { path: 'add-property', component: AddPropertyComponent },
+  {
+    path: 'property-detail/:id',
+    component: PropertyDetailsComponent,
+    resolve: { prop: PropertyDetailsResolver },
+  },
+  { path: 'rent-property', component: PropertyListComponent },
+  { path: 'user/login', component: UserLoginComponent },
+  { path: 'user/register', component: UserRegisterComponent },
+  { path: '**', component: PropertyListComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
