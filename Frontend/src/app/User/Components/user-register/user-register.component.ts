@@ -62,7 +62,7 @@ export class UserRegisterComponent implements OnInit {
   resetForm(){
     this.userRegisterForm.reset();
   }
-  // Controllers Getter ↓
+ //#region <Getter Methods>
   get userName(){
     return this.userRegisterForm.get('userName') as FormControl
    }
@@ -78,5 +78,5 @@ export class UserRegisterComponent implements OnInit {
   get phoneNumber(){
     return this.userRegisterForm.get('phoneNumber') as FormControl
    }
-   //********************* */
+ // #endregion
 }

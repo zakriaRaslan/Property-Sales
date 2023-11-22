@@ -1,8 +1,5 @@
-export interface IProperty{
-  Id:number;
-  SaleRent:number;
-  Name:string;
-  Type:string;
-  Price:number;
-  Image?:string;
+import { IPropertyBase } from "./IpropertyBase";
+
+export interface IProperty extends IPropertyBase{
+Description:string;
 }

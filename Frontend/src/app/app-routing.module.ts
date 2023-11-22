@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PropertyListComponent } from './Property/property-list/property-list.component';
-import { AddPropertyComponent } from './Property/add-property/add-property.component';
-import { PropertyDetailsComponent } from './Property/property-details/property-details.component';
+import { PropertyListComponent } from './Property/Components/property-list/property-list.component';
+import { AddPropertyComponent } from './Property/Components/add-property/add-property.component';
+import { PropertyDetailsComponent } from './Property/Components/property-details/property-details.component';
 import { UserLoginComponent } from './User/Components/user-login/user-login.component';
 import { UserRegisterComponent } from './User/Components/user-register/user-register.component';
 

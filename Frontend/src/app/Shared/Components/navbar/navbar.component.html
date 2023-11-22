@@ -25,12 +25,24 @@
         </li>
       </ul>
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isLoggedIn()">
           <a  routerLink="user/login" class="nav-link">Login</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isLoggedIn()">
           <a  routerLink="user/register" class="nav-link">Register</a>
         </li>
+        <div class="btn-group " dropdown *ngIf="isLoggedIn()">
+          <button id="button-animated" dropdownToggle type="button" class="btn btn-outline-light dropdown-toggle"
+                  aria-controls="dropdown-animated">
+            Welcome {{userName}} <span class="caret"></span>
+          </button>
+          <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-animated">
+            <li role="menuitem"><a class="dropdown-item" href="#"><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-user"></i> Settings</a></li>
+            <li role="menuitem"><a class="dropdown-item" routerLink="user/register" (click)="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+          </ul>
+        </div>
       </ul>
     </div>
   </div>
