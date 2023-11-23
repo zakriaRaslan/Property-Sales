@@ -19,6 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserLoginComponent } from './User/Components/user-login/user-login.component';
 import { UserRegisterComponent } from './User/Components/user-register/user-register.component';
 import { PropertyCardComponent } from './Property/Components/property-card/property-card.componet';
+import { FilterPipe } from './Property/Pipes/filter.pipe';
+import { SortPipe } from './Property/Pipes/sort.pipe';
 
 
 @NgModule({
@@ -31,6 +33,8 @@ import { PropertyCardComponent } from './Property/Components/property-card/prope
     PropertyDetailsComponent,
     UserLoginComponent,
     UserRegisterComponent,
+    FilterPipe,
+    SortPipe,
   ],
   imports: [
     BrowserModule,
