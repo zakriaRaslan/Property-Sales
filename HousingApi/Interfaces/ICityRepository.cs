@@ -1,0 +1,12 @@
+﻿using HousingApi.Models;
+
+namespace HousingApi.Interfaces
+{
+    public interface ICityRepository
+    {
+        Task<IEnumerable<City>> GetCitiesAsync();
+        void SetCity(City city);
+        void DeleteCity(int cityId);
+
+    }
+}

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { IPropertyBase } from "../../Models/IpropertyBase";
+import { IPropertyBase } from "../../Models/IPropertyBase";
 
 
 @Component({

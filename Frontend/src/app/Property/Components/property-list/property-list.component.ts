@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { HousingService } from 'src/app/Services/housing.service';
 import { ActivatedRoute } from '@angular/router';
-import { IPropertyBase } from '../../Models/IpropertyBase';
+import { IPropertyBase } from '../../Models/IPropertyBase';
 import { Property } from '../../Models/Property';
 
 @Component({
@@ -21,6 +21,7 @@ export class PropertyListComponent implements OnInit {
   constructor(private housingService:HousingService , private activateRoute:ActivatedRoute) {}
 
   ngOnInit() {
+
     if(this.activateRoute.snapshot.url.toString()){
       this.SellRent=2
     }

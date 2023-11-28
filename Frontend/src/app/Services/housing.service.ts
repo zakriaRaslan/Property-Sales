@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { IProperty } from '../Property/Models/IProperty.interface';
-import { IPropertyBase } from '../Property/Models/IpropertyBase';
+import { IPropertyBase } from '../Property/Models/IPropertyBase';
 import { Property } from '../Property/Models/Property';
 
 @Injectable({
@@ -10,6 +10,10 @@ import { Property } from '../Property/Models/Property';
 })
 export class HousingService {
   constructor(private http: HttpClient) {}
+
+  getAllCities():Observable<string[]>{
+    return this.http.get<string[]>('http://localhost:17420/api/City')
+  }
 
   getAllProperties(SellRent?: number): Observable<Property[]> {
     return this.http.get('data/properties.json').pipe(
