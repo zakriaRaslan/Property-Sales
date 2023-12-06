@@ -1,4 +1,3 @@
-using HousingApi.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HousingApi.Data
@@ -10,6 +9,14 @@ namespace HousingApi.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<City> Cities { get; set; }
+        public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        }
+
     }
 
 

@@ -1,5 +1,4 @@
 ﻿using HousingApi.Data.Repositories;
-using HousingApi.Interfaces;
 
 namespace HousingApi.Data
 {
@@ -12,8 +11,9 @@ namespace HousingApi.Data
             _dbContext = dbcontext;
         }
 
-        public ICityRepository CityRepository =>
-            new CityRepository(_dbContext);
+        public ICityRepository CityRepository => new CityRepository(_dbContext);
+
+        public IUserRepository UserRepository => new UserRepository(_dbContext);
 
         public async Task<bool> SaveAsync()
         {

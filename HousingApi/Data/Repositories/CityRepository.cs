@@ -1,6 +1,4 @@
-﻿using HousingApi.Interfaces;
-using HousingApi.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace HousingApi.Data.Repositories
 {
@@ -31,9 +29,18 @@ namespace HousingApi.Data.Repositories
             }
         }
 
+        public void UpdateCity(City city)
+        {
+
+        }
+
+        public async Task<City> FindCityAsync(int cityId)
+        {
+            var city = await _dbContext.Cities.FindAsync(cityId);
+
+            return city;
 
 
-
-
+        }
     }
 }
